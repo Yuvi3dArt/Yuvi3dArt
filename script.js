@@ -68,73 +68,99 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryGrid = document.getElementById('modal-gallery-grid');
 
     const projectData = {
-        "Neon Nights: District 9": {
-            tags: ["Unreal Engine 5", "Lumen", "Nanite"],
-            desc: "A futuristic urban environment exploration focusing on realistic neon lighting and volumetric fog effects in UE5.3. All assets are custom-built utilizing a modular pipeline.",
-            media: "https://videos.pexels.com/video-files/3129638/3129638-uhd_2560_1440_30fps.mp4",
-            type: "video",
+        "High-End Car Render": {
+            software: "Unreal Engine 5, Maya, Substance Painter",
+            role: "Modeling, Texturing, Lighting, Rendering",
+            desc: "A photorealistic automotive visualization project. High-poly car modeling in Maya, detailed PBR texturing in Substance, and cinematic real-time rendering in Unreal Engine 5.",
+            media: "images/car/main.jpg",
+            type: "image",
+            video: "images/competition_hours.mp4",
             gallery: [
-                "https://images.unsplash.com/photo-1616489953149-8c6525381162?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800"
+                "images/car/main.jpg",
+                "images/car/1.jpg",
+                "images/car/2.jpg",
+                "images/car/F side.jpg",
+                "images/car/black car.jpg",
+                "images/car/black.jpg",
+                "images/car/grey.jpg",
+                "images/car/wireframe.jpg"
             ]
         },
-        "The Apex Predator": {
-            tags: ["Blender", "V-Ray", "Substance"],
-            desc: "High-fidelity automotive render of a concept supercar. Focused on complex surface curvatures and realistic carbon fiber shaders.",
-            media: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=1600",
+        "Ancient Axe Sculpt": {
+            software: "ZBrush, Maya, Substance Painter",
+            role: "High-Poly Sculpting, Retopology, Texturing",
+            desc: "Detailed prop work focusing on intricate carvings and realistic material wear. Sculpted in ZBrush and textured with multi-layered PBR materials.",
+            media: "images/axe/main.jpg",
             type: "image",
             gallery: [
-                "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800"
+                "images/axe/main.jpg",
+                "images/axe/png.jpg",
+                "images/axe/png 2.jpg",
+                "images/axe/png 3.jpg",
+                "images/axe/png 5.jpg",
+                "images/axe/png 6.png",
+                "images/axe/wire.jpg"
             ]
         },
-        "Synthwave Memories": {
-            tags: ["Maya", "After Effects", "Arnold"],
-            desc: "A stylized product animation for a retro handheld console. The project explores 80s aesthetics with vibrant purple/teal lighting and custom CRT shader effects.",
-            media: "https://videos.pexels.com/video-files/7565438/7565438-uhd_2560_1440_30fps.mp4",
-            type: "video",
-            gallery: [
-                "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?auto=format&fit=crop&q=80&w=800"
-            ]
-        },
-        "Minimalist Haven": {
-            tags: ["UE5", "ArchViz", "Lumen"],
-            desc: "Modern interior design visualization. Developed to test the limits of Lumen's real-time global illumination for subtle, indirect daylighting.",
-            media: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1600",
+        "Sci-Fi Robot Design": {
+            software: "Maya, Substance Painter, Unreal Engine 5",
+            role: "Hard Surface Modeling, Look Dev, Rendering",
+            desc: "A futuristic character design focused on mechanical functionalism and advanced material shaders. Rendered in real-time.",
+            media: "images/robot/main.jpg",
             type: "image",
             gallery: [
-                "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+                "images/robot/main.jpg",
+                "images/robot/side.jpg",
+                "images/robot/top mid.jpg",
+                "images/robot/GREY.jpg",
+                "images/robot/wire.jpg"
             ]
         },
-        "Cyber-Samurai 2177": {
-            tags: ["ZBrush", "Substance", "Marvelous"],
-            desc: "A high-poly character sculpt featuring intricate mechanical parts and realistic fabric simulation for the clothing.",
-            media: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?auto=format&fit=crop&q=80&w=1600",
+        "Luxury High Heel": {
+            software: "Maya, ZBrush, Arnold",
+            role: "Modeling, Sculpting, Lighting",
+            desc: "Product visualization focusing on elegant curves and complex material layering (leather, metal, fabric).",
+            media: "images/heel/main.jpg",
             type: "image",
             gallery: [
-                "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800"
+                "images/heel/main.jpg",
+                "images/heel/4.jpg",
+                "images/heel/lighting.jpg",
+                "images/heel/wire.jpg"
             ]
         },
-        "Lost Relics: Jungle": {
-            tags: ["UE5", "Nanite", "Quixel"],
-            desc: "Cinematic environment walkthrough of an ancient temple overgrown by nature. Utilized Nanite for ultra-detailed stone ruins and procedural foliage layers.",
-            media: "https://videos.pexels.com/video-files/4201248/4201248-uhd_2560_1440_24fps.mp4",
-            type: "video",
+        "Grandmaster Chess": {
+            software: "Maya, V-Ray, Photoshop",
+            role: "Modeling, Lighting, Rendering",
+            desc: "Classic set visualization focusing on studio lighting, caustic effects, and realistic wood/marble textures.",
+            media: "images/chess/main.jpg",
+            type: "image",
             gallery: [
-                "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800",
-                "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800"
+                "images/chess/main.jpg",
+                "images/chess/3.jpg",
+                "images/chess/light.jpg",
+                "images/chess/wire.jpg"
             ]
+        },
+        "24 FPS Cinematic": {
+            software: "After Effects, Premiere Pro",
+            role: "Motion Graphics, Video Editing",
+            desc: "High-quality video production and motion design reel showcasing timing, rhythm, and visual storytelling.",
+            media: "images/24 FPS.mp4",
+            type: "video"
         }
     };
 
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
-            const title = card.querySelector('h5').innerText;
+            const rawTitle = card.querySelector('h5').innerText;
+            // Find the matching key in projectData (case-insensitive approach)
+            const title = Object.keys(projectData).find(key =>
+                key.toLowerCase() === rawTitle.toLowerCase().trim()
+            ) || rawTitle;
+
             const data = projectData[title];
+            if (!data) return; // Guard clause
 
             modalTitle.innerText = title;
             modalDesc.innerText = data.desc;
@@ -157,15 +183,40 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.gallery && data.gallery.length > 0) {
                 galleryContainer.classList.remove('hidden');
                 galleryGrid.innerHTML = '';
-                data.gallery.forEach(imgSrc => {
+
+                // Add video to gallery if it exists
+                const fullGallery = [...data.gallery];
+                if (data.video) fullGallery.push(data.video);
+
+                fullGallery.forEach(itemSrc => {
+                    const isVideoItem = itemSrc.endsWith('.mp4');
                     const thumb = document.createElement('div');
-                    thumb.className = 'gallery-thumb';
-                    thumb.innerHTML = `<img src="${imgSrc}" alt="Gallery Detail">`;
+                    thumb.className = 'gallery-thumb relative';
+
+                    if (isVideoItem) {
+                        thumb.innerHTML = `
+                            <video src="${itemSrc}" class="w-full h-full object-cover"></video>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                                <i class="fa-solid fa-play text-white text-xs"></i>
+                            </div>
+                        `;
+                    } else {
+                        thumb.innerHTML = `<img src="${itemSrc}" alt="Gallery Detail">`;
+                    }
+
                     thumb.addEventListener('click', () => {
-                        modalVideo.classList.add('hidden');
-                        modalVideo.pause();
-                        modalImg.classList.remove('hidden');
-                        modalImg.src = imgSrc.replace('w=400', 'w=1600');
+                        if (isVideoItem) {
+                            modalImg.classList.add('hidden');
+                            modalVideo.classList.remove('hidden');
+                            modalVideo.querySelector('source').src = itemSrc;
+                            modalVideo.load();
+                            modalVideo.play();
+                        } else {
+                            modalVideo.classList.add('hidden');
+                            modalVideo.pause();
+                            modalImg.classList.remove('hidden');
+                            modalImg.src = itemSrc;
+                        }
                     });
                     galleryGrid.appendChild(thumb);
                 });
@@ -175,12 +226,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const tagsContainer = document.getElementById('modal-tags');
             tagsContainer.innerHTML = '';
-            data.tags.forEach(tag => {
-                const span = document.createElement('span');
-                span.className = 'px-3 py-1 bg-blue-500/10 text-blue-500 border border-blue-500/20 rounded-full text-[10px] font-bold uppercase';
-                span.innerText = tag;
-                tagsContainer.appendChild(span);
-            });
+
+            // Display Role as a primary tag
+            if (data.role) {
+                const roleSpan = document.createElement('span');
+                roleSpan.className = 'px-3 py-1 bg-blue-500 text-white rounded-full text-[10px] font-bold uppercase';
+                roleSpan.innerText = data.role.split(',')[0]; // Show main role
+                tagsContainer.appendChild(roleSpan);
+            }
+
+            // Display Software list in modal details
+            const softwareList = document.querySelector('#project-modal ul');
+            if (softwareList && data.software) {
+                softwareList.innerHTML = '';
+                data.software.split(',').forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<i class="fa-solid fa-check text-blue-500 mr-2"></i> ${item.trim()}`;
+                    softwareList.appendChild(li);
+                });
+            }
 
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
