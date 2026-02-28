@@ -1,0 +1,326 @@
+/* Custom Styles for 3D Artist Portfolio */
+
+:root {
+    --accent-blue: #3b82f6;
+    --dark-bg: #050505;
+    --zinc-900: #18181b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.floating-animation {
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Glow Pulse */
+@keyframes glowPulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+}
+
+.profile-glow {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Mobile Menu Active State */
+#mobile-menu.active {
+    transform: translateY(0);
+}
+
+.mobile-link {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#mobile-menu.active .mobile-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for mobile links animation */
+#mobile-menu.active .mobile-link:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+#mobile-menu.active .mobile-link:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+#mobile-menu.active .mobile-link:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+#mobile-menu.active .mobile-link:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+#mobile-menu.active .mobile-link:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+#mobile-menu.active .mobile-link:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+/* Custom Cursor Styles */
+#cursor,
+#cursor-blur {
+    transition: transform 0.1s ease-out;
+}
+
+/* Glassmorphism Navbar */
+nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Project Card Hover Effects */
+.project-card:hover img {
+    filter: grayscale(0%) contrast(110%);
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(59, 130, 246, 0);
+    border-radius: inherit;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Editable Resume Styling */
+#editable-resume [contenteditable="true"]:focus {
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+/* GSAP Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Skill Icon Glow */
+.skill-item:hover div {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Modal Scrollbar */
+#project-modal .overflow-y-auto::-webkit-scrollbar {
+    width: 4px;
+}
+
+#project-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Marquee Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 24px));
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.marquee-container:hover .animate-scroll {
+    animation-play-state: paused;
+}
+
+/* Project Modal Media Styles */
+#modal-media-container {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.model-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.gallery-thumb {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-thumb:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.75rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .profile-container {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .project-card h5 {
+        font-size: 1.25rem !important;
+    }
+
+    .project-card p {
+        font-size: 0.75rem !important;
+        line-height: 1.4 !important;
+    }
+
+    #cv .max-w-4xl {
+        padding: 0 10px;
+    }
+
+    #editable-resume {
+        padding: 30px 20px !important;
+    }
+
+    #editable-resume .md\:col-span-1 {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Print Styles for CV Download */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #editable-resume,
+    #editable-resume * {
+        visibility: visible !important;
+        color: #111 !important;
+        background: transparent !important;
+    }
+
+    #editable-resume {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 40px !important;
+        background: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-family: Arial, sans-serif !important;
+    }
+
+    #editable-resume .md\:col-span-1 {
+        border-right: 1px solid #ddd !important;
+    }
+
+    #editable-resume .text-blue-500 {
+        color: #000 !important;
+        font-weight: bold !important;
+    }
+
+    #editable-resume [contenteditable="true"]:focus {
+        background: none !important;
+        outline: none !important;
+    }
+
+    /* Hide UI elements in print */
+    .absolute.top-4.right-4,
+    #download-cv,
+    .italic.text-gray-500 {
+        display: none !important;
+    }
+
+    #editable-resume div {
+        border-color: #eee !important;
+    }
+
+    #editable-resume .bg-zinc-900 {
+        background: white !important;
+    }
+}
