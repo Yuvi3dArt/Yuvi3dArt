@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectData = {
         "High-End Car Render": {
-            software: "Unreal Engine 5, Maya, Substance Painter",
+            software: "Arnold, Maya, Substance Painter",
             role: "Modeling, Texturing, Lighting, Rendering",
             desc: "A photorealistic automotive visualization project. High-poly car modeling in Maya, detailed PBR texturing in Substance, and cinematic real-time rendering in Unreal Engine 5.",
             media: "images/car/main.jpg",
             type: "image",
-            video: "images/competition_hours.mp4",
+            video: "",
             gallery: [
                 "images/car/main.jpg",
                 "images/car/1.jpg",
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "Ancient Axe Sculpt": {
-            software: "ZBrush, Maya, Substance Painter",
+            software: "ZBrush, Maya, Substance Painter, Arnold",
             role: "High-Poly Sculpting, Retopology, Texturing",
             desc: "Detailed prop work focusing on intricate carvings and realistic material wear. Sculpted in ZBrush and textured with multi-layered PBR materials.",
             media: "images/axe/main.jpg",
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "Sci-Fi Robot Design": {
-            software: "Maya, Substance Painter, Unreal Engine 5",
+            software: "Maya, Substance Painter, Arnold",
             role: "Hard Surface Modeling, Look Dev, Rendering",
             desc: "A futuristic character design focused on mechanical functionalism and advanced material shaders. Rendered in real-time.",
             media: "images/robot/main.jpg",
@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "Luxury High Heel": {
-            software: "Maya, ZBrush, Arnold",
-            role: "Modeling, Sculpting, Lighting",
+            software: "Maya, Substance-Painter, Arnold",
+            role: "Modeling, Lighting, Rendering",
             desc: "Product visualization focusing on elegant curves and complex material layering (leather, metal, fabric).",
             media: "images/heel/main.jpg",
             type: "image",
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "Grandmaster Chess": {
-            software: "Maya, V-Ray, Photoshop",
+            software: "Maya, Arnold, Photoshop",
             role: "Modeling, Lighting, Rendering",
             desc: "Classic set visualization focusing on studio lighting, caustic effects, and realistic wood/marble textures.",
             media: "images/chess/main.jpg",
@@ -143,11 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "24 FPS Cinematic": {
-            software: "After Effects, Premiere Pro",
-            role: "Motion Graphics, Video Editing",
-            desc: "High-quality video production and motion design reel showcasing timing, rhythm, and visual storytelling.",
+            software: "3DS-MAX, V-ray",
+            role: "Animation, Lighting, Rendering",
+            desc: "High-quality video Animation and rendering showcasing timing, rhythm, and visual storytelling.",
             media: "images/24 FPS.mp4",
-            type: "video"
+            type: "video",
+             gallery: [
+                "images/competition_hours.mp4",
+               "images/24 FPS.mp4"
+            ]
         }
     };
 
