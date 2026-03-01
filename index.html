@@ -920,46 +920,80 @@
     </footer>
 
     <!-- Project Modal (Placeholder) -->
-    <div id="project-modal"
-        class="fixed inset-0 z-[100] bg-black hidden flex items-center justify-center p-6 backdrop-blur-3xl">
-        <div
-            class="relative w-full max-w-6xl max-h-[90vh] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row">
-            <button id="close-modal"
-                class="absolute top-6 right-6 z-10 w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 hover:bg-red-500 hover:border-red-500 transition-all">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="w-full md:w-2/3 h-64 md:h-auto bg-black overflow-hidden flex flex-col">
-                <div id="modal-media-container" class="relative flex-1 w-full overflow-hidden">
-                    <img src="" id="modal-img" class="w-full h-full object-contain">
-                    <video id="modal-video" class="w-full h-full object-contain hidden" controls autoplay muted loop>
-                        <source src="" type="video/mp4">
-                    </video>
-                </div>
-                <div id="model-gallery" class="p-6 bg-zinc-950 border-t border-white/10 hidden">
-                    <h6 class="text-[10px] uppercase font-black tracking-widest text-white/50 mb-3">Model Breakdown &
-                        Iterations</h6>
-                    <div class="model-gallery-grid" id="modal-gallery-grid">
-                        <!-- Thumbs will be injected here -->
-                    </div>
-                </div>
+    <d<div id="project-modal"
+    class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 md:p-6 overflow-y-auto">
+
+    <div
+        class="relative w-full max-w-6xl bg-zinc-900 rounded-2xl md:rounded-3xl shadow-2xl border border-white/10 flex flex-col md:flex-row">
+
+        <!-- Close Button -->
+        <button id="close-modal"
+            class="absolute top-4 right-4 z-20 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 hover:bg-red-500 transition-all">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- LEFT SIDE (Media) -->
+        <div class="w-full md:w-2/3 bg-black flex flex-col">
+
+            <!-- Image / Video -->
+            <div id="modal-media-container"
+                class="w-full aspect-video md:aspect-auto md:h-[70vh] flex items-center justify-center bg-black">
+
+                <img src="" id="modal-img"
+                    class="w-full h-full object-contain">
+
+                <video id="modal-video"
+                    class="w-full h-full object-contain hidden"
+                    controls autoplay muted loop>
+                    <source src="" type="video/mp4">
+                </video>
             </div>
-            <div class="w-full md:w-1/3 p-8 md:p-12 overflow-y-auto">
-                <h5 id="modal-title" class="text-3xl font-black outfit mb-4 uppercase">Project Title</h5>
-                <div class="flex gap-2 mb-6" id="modal-tags">
+
+            <!-- Gallery -->
+            <div id="model-gallery"
+                class="p-4 md:p-6 bg-zinc-950 border-t border-white/10 hidden">
+
+                <h6 class="text-[10px] uppercase font-black tracking-widest text-white/50 mb-3">
+                    Model Breakdown & Iterations
+                </h6>
+
+                <div id="modal-gallery-grid"
+                    class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 </div>
-                <p id="modal-desc" class="text-gray-400 leading-relaxed mb-8">Detailed project description goes here...
-                </p>
-                <div class="space-y-4">
-                    <h6 class="text-blue-500 uppercase text-[10px] font-black tracking-widest">Software Used</h6>
-                    <ul class="text-sm text-gray-300 space-y-2">
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Maya</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Arnold</li>
-                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Adobe Substance Painter</li>
-                    </ul>
-                </div>
+
             </div>
         </div>
+
+        <!-- RIGHT SIDE (Content) -->
+        <div class="w-full md:w-1/3 p-6 md:p-10 overflow-y-auto max-h-[50vh] md:max-h-[80vh]">
+
+            <h5 id="modal-title"
+                class="text-2xl md:text-3xl font-black outfit mb-4 uppercase">
+                Project Title
+            </h5>
+
+            <div class="flex flex-wrap gap-2 mb-6" id="modal-tags"></div>
+
+            <p id="modal-desc"
+                class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                Detailed project description goes here...
+            </p>
+
+            <div class="space-y-4">
+                <h6 class="text-blue-500 uppercase text-[10px] font-black tracking-widest">
+                    Software Used
+                </h6>
+
+                <ul class="text-sm text-gray-300 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Maya</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Arnold</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Substance Painter</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const video = document.querySelector("video");
