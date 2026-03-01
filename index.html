@@ -72,44 +72,71 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 text-center">
-        <div class="z-10 opacity-0" id="hero-content">
-            <h2 class="text-blue-500 font-bold uppercase tracking-[0.3em] mb-4 text-sm md:text-base animate-pulse">
-                3D Artist | Unreal Engine | Maya | Substance Painter</h2>
+   <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 text-center overflow-hidden">
 
-            <!-- Animated Profile Photo -->
-            <div class="profile-container mt-4 mb-8 relative inline-block">
-                <div class="profile-glow absolute inset-0 bg-blue-500/20 blur-2xl rounded-full scale-110"></div>
-                <div
-                    class="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500/50 p-1 relative z-10 overflow-hidden floating-animation shadow-2xl shadow-blue-500/20">
-                    <img src="images/pr_nater.jpeg" alt="Profile Photo" class="w-full h-full object-cover rounded-full">
-                </div>
-            </div>
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight outfit uppercase">
-                Nater <span
-                    class="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent italic">Sharma</span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-light mb-10 leading-relaxed">
-                I create high-quality 3D models, realistic textures, and cinematic renders using industry-standard
-                tools.
-                Passionate about building immersive digital environments and pushing visual boundaries.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="#work"
-                    class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
-                    View My Work
-                </a>
-                <a href="#cv"
-                    class="px-8 py-4 border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all">
-                    Download Resume
-                </a>
-                <a href="#contact"
-                    class="px-8 py-4 border border-blue-500/30 hover:bg-blue-500/10 text-white rounded-full font-bold transition-all">
-                    Contact Me
-                </a>
+    <!-- Background Video -->
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        
+        class="absolute inset-0 w-full h-full object-cover">
+        <source src="images/beach_video_loop.mp4" type="video/mp4">
+        <source src="images/beach_video_loop.webm" type="video/mp4">
+    </video>
+
+    <!-- Optional Dark Overlay (for better text visibility) -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 opacity-0" id="hero-content">
+
+        <h2 class="text-blue-500 font-bold uppercase tracking-[0.3em] mb-4 text-sm md:text-base animate-pulse">
+            3D Artist | Unreal Engine | Maya | Substance Painter
+        </h2>
+
+        <!-- Profile -->
+        <div class="profile-container mt-4 mb-8 relative inline-block">
+            <div class="profile-glow absolute inset-0 bg-blue-500/20 blur-2xl rounded-full scale-110"></div>
+            <div
+                class="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-blue-500/50 p-1 relative z-10 overflow-hidden floating-animation shadow-2xl shadow-blue-500/20">
+                <img src="images/pr_nater.jpeg" alt="Profile Photo"
+                    class="w-full h-full object-cover rounded-full">
             </div>
         </div>
-    </section>
+
+        <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight outfit uppercase">
+            Nater <span
+                class="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent italic">
+                Sharma
+            </span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-gray-300 text-lg md:text-xl font-light mb-10 leading-relaxed">
+            I create high-quality 3D models, realistic textures, and cinematic renders using industry-standard tools.
+            Passionate about building immersive digital environments and pushing visual boundaries.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a href="#work"
+                class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                View My Work
+            </a>
+
+            <a href="#cv"
+                class="px-8 py-4 border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all">
+                Download Resume
+            </a>
+
+            <a href="#contact"
+                class="px-8 py-4 border border-blue-500/30 hover:bg-blue-500/10 text-white rounded-full font-bold transition-all">
+                Contact Me
+            </a>
+        </div>
+
+    </div>
+</section>
 
     <!-- About Me Section -->
     <section id="about" class="py-24 px-6 md:px-12 bg-black relative overflow-hidden">
@@ -933,7 +960,15 @@
             </div>
         </div>
     </div>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector("video");
+    video.play().catch(() => {
+        video.muted = true;
+        video.play();
+    });
+});
+</script>
     <script src="script.js"></script>
 </body>
 
