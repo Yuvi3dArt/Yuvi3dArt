@@ -150,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
             type: "video",
              gallery: [
                 "images/competition_hours.mp4",
-               "images/24 FPS.mp4"
+               "images/24 FPS.mp4",
+              "images/beach_video_loop.mp4"
             ]
         }
     };
