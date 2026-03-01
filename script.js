@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/heel/wire.jpg"
             ]
         },
-        "Grandmaster Chess": {
+        "Chess": {
             software: "Maya, Arnold, Photoshop",
             role: "Modeling, Lighting, Rendering",
             desc: "Classic set visualization focusing on studio lighting, caustic effects, and realistic wood/marble textures.",
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/chess/wire.jpg"
             ]
         },
-        "24 FPS Cinematic": {
+        "3D Animation": {
             software: "3DS-MAX, V-ray",
             role: "Animation, Lighting, Rendering",
             desc: "High-quality video Animation and rendering showcasing timing, rhythm, and visual storytelling.",
